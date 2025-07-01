@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CRUD Completo con JavaScript y CSS Personalizado (ID Automático)</title>
+  <link rel="stylesheet" href="estilos.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+  />
+</head>
+<body>
+  <h1>CRUD de Usuarios Completo (ID Automático)</h1>
+
+  <div class="contenedor">
+    <form id="formularioUsuario" novalidate>
+      <div>
+        <label for="nombre">Nombre:</label>
+        <input
+          type="text"
+          id="nombre"
+          name="nombre"
+          placeholder="Ingrese el nombre"
+          required
+          autocomplete="off"
+        />
+      </div>
+      <div>
+        <label for="apellido">Apellido:</label>
+        <input
+          type="text"
+          id="apellido"
+          name="apellido"
+          placeholder="Ingrese el apellido"
+          required
+          autocomplete="off"
+        />
+      </div>
+      <div>
+        <label for="direccion">Dirección:</label>
+        <input
+          type="text"
+          id="direccion"
+          name="direccion"
+          placeholder="Ingrese la dirección"
+          required
+          autocomplete="off"
+        />
+      </div>
+      <div>
+        <label for="email">Correo Electrónico:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="ejemplo@correo.com"
+          required
+          autocomplete="off"
+        />
+      </div>
+      <div>
+        <label for="contrasena">Contraseña:</label>
+        <input
+          type="password"
+          id="contrasena"
+          name="contrasena"
+          placeholder="Ingrese la contraseña"
+          required
+          minlength="6"
+          autocomplete="new-password"
+        />
+      </div>
+      <div>
+        <label for="fechaCreacion">Fecha de Creación:</label>
+        <input
+          type="date"
+          id="fechaCreacion"
+          name="fechaCreacion"
+          required
+        />
+      </div>
+      <div>
+        <label for="fechaActualizacion">Fecha de Actualización:</label>
+        <input
+          type="date"
+          id="fechaActualizacion"
+          name="fechaActualizacion"
+          required
+        />
+      </div>
+      <div class="botones">
+        <button type="submit" id="botonAgregar" aria-label="Agregar usuario">
+          <i class="fas fa-plus"></i>
+          <span>Agregar</span>
+        </button>
+        <button type="button" id="botonCancelar" class="hidden" aria-label="Cancelar edición">
+          Cancelar
+        </button>
+      </div>
+    </form>
+
+    <table aria-label="Lista de usuarios">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Dirección</th>
+          <th>Correo Electrónico</th>
+          <th>Contraseña</th>
+          <th>Fecha de Creación</th>
+          <th>Fecha de Actualización</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="listaUsuarios"></tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
